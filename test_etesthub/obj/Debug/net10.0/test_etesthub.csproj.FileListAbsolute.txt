@@ -1,0 +1,5 @@
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0\test_etesthub.csproj.AssemblyReference.cache
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0\test_etesthub.GeneratedMSBuildEditorConfig.editorconfig
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0\test_etesthub.AssemblyInfoInputs.cache
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0\test_etesthub.AssemblyInfo.cs
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0\test_etesthub.csproj.CoreCompileInputs.cache
