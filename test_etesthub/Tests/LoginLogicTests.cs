@@ -15,6 +15,7 @@ namespace test_etesthub.Tests
         private LoginPage _loginPage;
         private ExcelReportManager _excelManager;
         private string _currentTestCaseId = "";
+        private string _actualResult = "";
 
         private readonly string _loginUrl = "https://e-testhub-frontend.onrender.com/Home/Login";
 
@@ -182,7 +183,12 @@ namespace test_etesthub.Tests
 
             if (!string.IsNullOrEmpty(testCaseId))
             {
-                if (TestContext.CurrentContext.Result.Outcome.Status == NUnit.Framework.Interfaces.TestStatus.Failed)
+                // Tự động lấy tên Hàm đang chạy
+                string testMethodName = TestContext.CurrentContext.Test.MethodName;
+                var testStatus = TestContext.CurrentContext.Result.Outcome.Status;
+                // Lấy thông báo lỗi của Selenium nếu có
+                string errorMessage = TestContext.CurrentContext.Result.Message;
+                if (testStatus == NUnit.Framework.Interfaces.TestStatus.Failed)
                 {
                     string screenshotPath = "";
                     try
@@ -192,11 +198,15 @@ namespace test_etesthub.Tests
                     }
                     catch { }
 
-                    _excelManager.WriteResult(testCaseId, "FAIL", screenshotPath);
+                    // Xử lý chuỗi lỗi
+                    string actualResult = string.IsNullOrEmpty(errorMessage) ? "Gặp lỗi không xác định" : errorMessage;
+                    if (actualResult.Length > 150) actualResult = actualResult.Substring(0, 150) + "...";
+                    _excelManager.WriteResult(testCaseId, "FAIL", actualResult, testMethodName, screenshotPath);
                 }
                 else
                 {
-                    _excelManager.WriteResult(testCaseId, "PASS", "");
+                    // Nếu pass thì ghi nội dung tiêu chuẩn
+                    _excelManager.WriteResult(testCaseId, "PASS", "Hệ thống hoạt động đúng như Expected Result", testMethodName, "");
                 }
             }
 

@@ -179,3 +179,4 @@ E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0-windows\ref
 E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0-windows\test_etesthub.pdb
 E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0-windows\test_etesthub.genruntimeconfig.cache
 E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0-windows\ref\test_etesthub.dll
+E:\code\bdclpm\LT\doan\test_etesthub\test_etesthub\obj\Debug\net10.0-windows\test_etesthub.sourcelink.json
