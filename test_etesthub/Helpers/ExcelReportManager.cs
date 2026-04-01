@@ -12,6 +12,7 @@ namespace test_etesthub.Helpers
         private readonly string _filePath;
         private ExcelPackage _excelPackage;
         private ExcelWorksheet _worksheet;
+        private readonly string _sheetName;
 
         private const int Col_ID = 3;             // Cột C
         private const int Col_Steps = 7;          // Cột G
@@ -21,11 +22,11 @@ namespace test_etesthub.Helpers
         private const int Col_ResultStatus = 12;  // Cột K
         private const int Col_Screenshot = 14;    // Cột M
 
-        public ExcelReportManager(string excelFileName)
+        public ExcelReportManager(string excelFileName, string sheetName = "II.1_DangNhap")
         {
             ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
             _filePath = excelFileName.Contains(":") ? excelFileName : Path.Combine(AppDomain.CurrentDomain.BaseDirectory, excelFileName);
-
+            _sheetName = sheetName;
             if (!File.Exists(_filePath))
             {
                 throw new FileNotFoundException($"Không tìm thấy file excel: {_filePath}");
@@ -35,7 +36,7 @@ namespace test_etesthub.Helpers
         public void OpenReport()
         {
             _excelPackage = new ExcelPackage(new FileInfo(_filePath));
-            _worksheet = _excelPackage.Workbook.Worksheets["II.1_DangNhap"];
+            _worksheet = _excelPackage.Workbook.Worksheets[_sheetName];
         }
 
         private string GetCellText(int row, int col)
