@@ -44,7 +44,7 @@ namespace test_etesthub.Helpers
             return string.IsNullOrEmpty(cellText) ? "" : cellText.Trim();
         }
 
-        // 1. HÀM GOM DATA NHIỀU DÒNG CHO 1 TEST CASE
+        // HÀM GOM DATA NHIỀU DÒNG CHO 1 TEST CASE
         public string[] GetTestDataArray(string testCaseId)
         {
             var dataList = new System.Collections.Generic.List<string>();
@@ -79,7 +79,7 @@ namespace test_etesthub.Helpers
             return dataList.ToArray();
         }
 
-        // 2. HÀM GHI KẾT QUẢ VÀ DÁN ẢNH LỖI
+        // HÀM GHI KẾT QUẢ VÀ DÁN ẢNH LỖI
         public void WriteResult(string testCaseId, string status, string actualResult, string testMethodName, string screenshotPath)
         {
             try
@@ -91,35 +91,34 @@ namespace test_etesthub.Helpers
 
                     if (cellId == targetId)
                     {
-                        // Cập nhật thông tin text
                         _worksheet.Cells[row, Col_ResultStatus].Value = status;
                         _worksheet.Cells[row, Col_ActualResult].Value = actualResult;
                         _worksheet.Cells[row, Col_TestScript].Value = testMethodName;
 
-                        // Định dạng màu sắc
                         var statusCell = _worksheet.Cells[row, Col_ResultStatus];
                         var actualCell = _worksheet.Cells[row, Col_ActualResult];
+
+                        for (int i = _worksheet.Drawings.Count - 1; i >= 0; i--)
+                        {
+                            var drawing = _worksheet.Drawings[i];
+                            if (drawing.From.Row == row - 1 && drawing.From.Column == Col_Screenshot - 1)
+                            {
+                                _worksheet.Drawings.Remove(i);
+                            }
+                        }
 
                         if (status == "PASS")
                         {
                             statusCell.Style.Font.Color.SetColor(Color.Green);
                             actualCell.Style.Font.Color.SetColor(Color.Green);
+
+                            _worksheet.Row(row).Height = 15;
                         }
                         else
                         {
                             statusCell.Style.Font.Color.SetColor(Color.Red);
                             actualCell.Style.Font.Color.SetColor(Color.Red);
 
-                            for (int i = _worksheet.Drawings.Count - 1; i >= 0; i--)
-                            {
-                                var drawing = _worksheet.Drawings[i];
-                                // EPPlus dùng index từ 0, nên row-1 và Col_Screenshot-1
-                                // Kiểm tra xem drawing có nằm bắt đầu từ đúng ô này không
-                                if (drawing.From.Row == row - 1 && drawing.From.Column == Col_Screenshot - 1)
-                                {
-                                    _worksheet.Drawings.Remove(i);
-                                }
-                            }
                             if (!string.IsNullOrEmpty(screenshotPath) && File.Exists(screenshotPath))
                             {
                                 string picName = $"Error_{testCaseId}_{Guid.NewGuid().ToString().Substring(0, 5)}";
@@ -127,7 +126,7 @@ namespace test_etesthub.Helpers
 
                                 pic.SetPosition(row - 1, 2, Col_Screenshot - 1, 2);
                                 pic.SetSize(120, 80);
-                                _worksheet.Row(row).Height = 65;
+                                _worksheet.Row(row).Height = 65; 
                             }
                         }
 

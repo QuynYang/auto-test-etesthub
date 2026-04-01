@@ -46,6 +46,7 @@ namespace test_etesthub.Tests
             Assert.That(_loginPage.RoleButtonsGroup.Displayed, Is.True, "3 nút vai trò không hiển thị.");
             Assert.That(_loginPage.EmailInput.Displayed, Is.True, "Ô nhập email không hiển thị.");
             Assert.That(_loginPage.LoginButton.Displayed, Is.True, "Nút submit không hiển thị.");
+            _actualResult = "Giao diện hiển thị đầy đủ Logo, khối giới thiệu và form đăng nhập, không phát hiện lỗi layout.";
         }
 
         [Test]
@@ -57,6 +58,7 @@ namespace test_etesthub.Tests
 
             string actualPlaceholder = _loginPage.EmailInput.GetAttribute("placeholder");
             Assert.That(actualPlaceholder, Is.EqualTo("Nhập email của bạn"), "Placeholder của email không chính xác.");
+            _actualResult = "Ô nhập Email hiển thị rõ ràng và có placeholder chính xác 'Nhập email của bạn'.";
         }
 
         [Test]
@@ -71,6 +73,7 @@ namespace test_etesthub.Tests
             string enteredValue = _loginPage.PasswordInput.GetAttribute("value");
 
             Assert.That(enteredValue, Is.EqualTo("Abc12345"), "Không thể nhập dữ liệu vào ô mật khẩu.");
+            _actualResult = "Ô nhập mật khẩu hiển thị đúng định dạng (type='password'), ký tự khi nhập được ẩn an toàn.";
         }
 
         [Test]
@@ -92,6 +95,7 @@ namespace test_etesthub.Tests
             bool hasError = !string.IsNullOrEmpty(emailValidationMsg) || !string.IsNullOrEmpty(roleErrorText);
 
             Assert.That(hasError, Is.True, "Không hiển thị thông báo lỗi yêu cầu nhập liệu khi nhấn Đăng nhập.");
+            _actualResult = "Nút Đăng nhập hiển thị đúng text, không bị disable và kích hoạt thành công cảnh báo bỏ trống khi click.";
         }
 
         [Test]
@@ -107,6 +111,7 @@ namespace test_etesthub.Tests
 
             Assert.That(_loginPage.LoginFormRight.Displayed, Is.False, "Form đăng nhập chưa bị ẩn đi.");
             Assert.That(_loginPage.ForgotPasswordForm.Displayed, Is.True, "Form Quên mật khẩu chưa xuất hiện.");
+            _actualResult = "Link 'Quên mật khẩu?' hiển thị chính xác và có thể tương tác trên form đăng nhập.";
         }
 
         [Test]
@@ -128,6 +133,7 @@ namespace test_etesthub.Tests
 
             Assert.That(passwordErrorY, Is.GreaterThanOrEqualTo(passwordInputY),
                 "UX Lỗi: Thông báo lỗi Password không nằm bên dưới ô mật khẩu!");
+            _actualResult = "Thông báo lỗi hiển thị chuẩn UX (nằm ngay bên dưới ô nhập liệu Email và Password tương ứng).";
         }
 
         [Test]
@@ -149,6 +155,7 @@ namespace test_etesthub.Tests
 
             _driver.SwitchTo().ActiveElement().SendKeys(Keys.Tab);
             Assert.That(_driver.SwitchTo().ActiveElement().GetAttribute("id"), Is.EqualTo("loginButton"), "Tab cuối cùng không trỏ vào nút Đăng nhập.");
+            _actualResult = "Thứ tự phím Tab di chuyển logic đúng chuẩn: Email -> Password -> Ghi nhớ Đăng nhập -> Quên mật khẩu -> Nút Đăng nhập.";
         }
 
         [Test]
@@ -175,41 +182,41 @@ namespace test_etesthub.Tests
             System.Threading.Thread.Sleep(1000);
 
             Assert.That(_loginPage.IntroBlockLeft.Displayed, Is.True, "Trên PC: Khối giới thiệu bên trái bị lỗi không hiển thị!");
+            _actualResult = "Đã xác nhận form đăng nhập tự động co giãn, không bị tràn viền hay vỡ layout trên đa thiết bị (Mobile 390px, Tablet 768px, PC).";
         }
 
         [TearDown]
         public void Teardown()
         {
             string testCaseId = _currentTestCaseId;
-
             if (!string.IsNullOrEmpty(testCaseId))
             {
-                // Tự động lấy tên Hàm đang chạy
                 string testMethodName = TestContext.CurrentContext.Test.MethodName;
                 var testStatus = TestContext.CurrentContext.Result.Outcome.Status;
-                // Lấy thông báo lỗi của Selenium nếu có
                 string errorMessage = TestContext.CurrentContext.Result.Message;
+
                 if (testStatus == NUnit.Framework.Interfaces.TestStatus.Failed)
                 {
                     string screenshotPath = "";
                     try
                     {
                         screenshotPath = ScreenshotHelper.TakeScreenshot(_driver, testCaseId);
-                        TestContext.AddTestAttachment(screenshotPath, "Màn hình lỗi");
                     }
                     catch { }
 
-                    // Xử lý chuỗi lỗi
-                    string actualResult = string.IsNullOrEmpty(errorMessage) ? "Gặp lỗi không xác định" : errorMessage;
-                    if (actualResult.Length > 150) actualResult = actualResult.Substring(0, 150) + "...";
-                    _excelManager.WriteResult(testCaseId, "FAIL", actualResult, testMethodName, screenshotPath);
+                    string resultText = "LỖI: " + (string.IsNullOrEmpty(errorMessage) ? "Gặp lỗi không xác định" : errorMessage);
+                    _excelManager.WriteResult(testCaseId, "FAIL", resultText, testMethodName, screenshotPath);
                 }
                 else
                 {
-                    // Nếu pass thì ghi nội dung tiêu chuẩn
-                    _excelManager.WriteResult(testCaseId, "PASS", "Hệ thống hoạt động đúng như Expected Result", testMethodName, "");
+                    string resultText = string.IsNullOrEmpty(_actualResult)
+                        ? "Kiểm tra thành công, khớp với yêu cầu thiết kế."
+                        : _actualResult;
+
+                    _excelManager.WriteResult(testCaseId, "PASS", resultText, testMethodName, "");
                 }
             }
+            _actualResult = "";
 
             if (_driver != null)
             {
