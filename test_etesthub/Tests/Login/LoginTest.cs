@@ -5,7 +5,7 @@ using OpenQA.Selenium.Chrome;
 using System;
 using test_etesthub.Pages;
 
-namespace test_etesthub.Tests
+namespace test_etesthub.Tests.Login
 {
     [TestFixture]
     public class LoginTests

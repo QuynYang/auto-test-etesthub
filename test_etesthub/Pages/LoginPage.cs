@@ -62,7 +62,18 @@ namespace test_etesthub.Pages
 
         public void ClickDangNhap()
         {
-            LoginButton.Click();
+            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView({block: 'center'});", LoginButton);
+
+            System.Threading.Thread.Sleep(200);
+
+            try
+            {
+                LoginButton.Click();
+            }
+            catch (ElementClickInterceptedException)
+            {
+                ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", LoginButton);
+            }
         }
 
         public void ClickQuenMatKhau()

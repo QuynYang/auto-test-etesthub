@@ -6,7 +6,7 @@ using OpenQA.Selenium.Chrome;
 using test_etesthub.Pages;
 using test_etesthub.Helpers;
 
-namespace test_etesthub.Tests
+namespace test_etesthub.Tests.Login
 {
     [TestFixture]
     public class LoginBoundaryTests
