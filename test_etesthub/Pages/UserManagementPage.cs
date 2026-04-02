@@ -31,5 +31,40 @@ namespace test_etesthub.Pages
 
         public IWebElement CreateUserBtn => _driver.FindElement(By.Id("createUserBtn"));
         public IWebElement BackBtn => _driver.FindElement(By.XPath("//a[contains(@class, 'btn-secondary') and contains(., 'Quay Lại')]"));
+
+        public IWebElement SearchInput => _driver.FindElement(By.Id("searchInput"));
+        public IWebElement UsersTable => _driver.FindElement(By.Id("usersTable"));
+        // CÁC HÀM HỖ TRỢ TƯƠNG TÁC THÔNG MINH
+        public void ScrollToElement(IWebElement element)
+        {
+            ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].scrollIntoView({block: 'center'});", element);
+            System.Threading.Thread.Sleep(300); // Đợi cuộn
+        }
+
+        public void ClickCreateUserBtn()
+        {
+            ScrollToElement(CreateUserBtn);
+            try
+            {
+                CreateUserBtn.Click();
+            }
+            catch (ElementClickInterceptedException)
+            {
+                ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", CreateUserBtn);
+            }
+        }
+
+        public void ClickBackBtn()
+        {
+            ScrollToElement(BackBtn);
+            try
+            {
+                BackBtn.Click();
+            }
+            catch (ElementClickInterceptedException)
+            {
+                ((IJavaScriptExecutor)_driver).ExecuteScript("arguments[0].click();", BackBtn);
+            }
+        }
     }
 }

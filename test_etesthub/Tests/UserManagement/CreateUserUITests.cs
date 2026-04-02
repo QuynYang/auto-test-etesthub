@@ -41,11 +41,14 @@ namespace test_etesthub.Tests.UserManagement
             _loginPage = new LoginPage(_driver);
             _userPage = new UserManagementPage(_driver);
 
+            // Đăng nhập quyền Admin
             _loginPage.GoToLoginPage(_loginUrl);
             _loginPage.RoleAdminBtn.Click();
             _loginPage.NhapThongTin("admin@gmail.com", "123456");
             _loginPage.ClickDangNhap();
-            System.Threading.Thread.Sleep(2000);
+
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            try { wait.Until(d => !d.Url.Contains("Login")); } catch { }
         }
 
         [Test]
@@ -155,6 +158,11 @@ namespace test_etesthub.Tests.UserManagement
             _currentTestCaseId = "S.2.1.7";
             _driver.Navigate().GoToUrl(_createUserUrl);
 
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait.Until(d => _userPage.CreateUserBtn.Displayed);
+
+            _userPage.ScrollToElement(_userPage.CreateUserBtn);
+
             bool isDisplayed = _userPage.CreateUserBtn.Displayed;
             bool isEnabled = _userPage.CreateUserBtn.Enabled;
             string classAttr = _userPage.CreateUserBtn.GetAttribute("class");
@@ -173,7 +181,10 @@ namespace test_etesthub.Tests.UserManagement
             _currentTestCaseId = "S.2.1.8";
             _driver.Navigate().GoToUrl(_createUserUrl);
 
-            _userPage.BackBtn.Click();
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait.Until(d => _userPage.BackBtn.Displayed);
+
+            _userPage.ClickBackBtn();
             System.Threading.Thread.Sleep(1500);
 
             Assert.That(_driver.Url.Contains("UserManagement"), Is.True, "Lỗi: Nút Quay Lại không chuyển hướng về trang Quản Lý.");
@@ -187,7 +198,10 @@ namespace test_etesthub.Tests.UserManagement
             _currentTestCaseId = "S.2.1.9";
             _driver.Navigate().GoToUrl(_createUserUrl);
 
-            _userPage.CreateUserBtn.Click();
+            WebDriverWait wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
+            wait.Until(d => _userPage.CreateUserBtn.Displayed);
+
+            _userPage.ClickCreateUserBtn();
             System.Threading.Thread.Sleep(500);
 
             string emailValidation = _userPage.EmailInput.GetAttribute("validationMessage");
