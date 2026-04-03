@@ -22,12 +22,10 @@ namespace test_etesthub.Tests.Login
         private string _currentTestCaseId = "";
         private string _actualResult = "";
 
-        // URL hệ thống
         private readonly string _loginUrl = "https://e-testhub-frontend.onrender.com/Home/Login";
         private readonly string _userMgmtUrl = "https://e-testhub-frontend.onrender.com/Admin/UserManagement";
         private readonly string _createUserUrl = "https://e-testhub-frontend.onrender.com/Admin/CreateUser";
 
-        // Biến lưu trữ email dùng chung để Test Case S.1.44 có thể lấy lại email do S.1.43 vừa tạo
         private static string _sharedStudentEmail = "";
 
         [OneTimeSetUp]
@@ -49,7 +47,6 @@ namespace test_etesthub.Tests.Login
             _userPage = new UserManagementPage(_driver);
         }
 
-        // Hàm hỗ trợ chọn Role từ text Excel
         private void SelectRoleFromExcelText(string roleText)
         {
             string lower = roleText.ToLower().Replace(" ", "");
@@ -63,7 +60,6 @@ namespace test_etesthub.Tests.Login
         {
             _currentTestCaseId = "S.1.43";
 
-            // 1. ĐỌC DỮ LIỆU TỪ EXCEL
             string[] testData = _excelManager.GetTestDataArray(_currentTestCaseId);
 
             if (testData.Length < 10)
@@ -71,38 +67,32 @@ namespace test_etesthub.Tests.Login
                 Assert.Fail($"Lỗi dữ liệu Excel: Test Case {_currentTestCaseId} yêu cầu ít nhất 10 dòng Test Data nhưng chỉ tìm thấy {testData.Length} dòng.");
             }
 
-            // Map dữ liệu theo thứ tự xuất hiện ở Cột H trong file Excel
-            string adminRole = testData[0];        // Quản Trị Viên
-            string adminEmail = testData[1];       // admin@gmail.com
-            string adminPass = testData[2];        // 123456
+            string adminRole = testData[0];       
+            string adminEmail = testData[1];       
+            string adminPass = testData[2];       
 
-            // Xử lý email sinh viên: Thêm timestamp vào email từ Excel để chạy 100 lần không bị trùng
-            string baseStudentEmail = testData[3]; // sv@gmail.com
+
+            string baseStudentEmail = testData[3]; 
             _sharedStudentEmail = baseStudentEmail.Replace("@", $"_{DateTime.Now:MMddHHmmss}@");
 
-            string studentFirstName = testData[4]; // Nguyễn
-            string studentLastName = testData[5];  // Văn A
-            string studentRole = testData[6];      // Sinh Viên
-            string studentPass = testData[7];      // 123456
-            string confirmPass = testData[8];      // 123456
+            string studentFirstName = testData[4]; 
+            string studentLastName = testData[5];  
+            string studentRole = testData[6];     
+            string studentPass = testData[7];     
+            string confirmPass = testData[8];     
 
-            string loginRole = testData[9];        // Sinh Viên
-            string loginPass = testData.Length > 10 ? testData[10] : studentPass; // 123456
+            string loginRole = testData[9];       
+            string loginPass = testData.Length > 10 ? testData[10] : studentPass;
 
             TestContext.WriteLine($"[INFO] Data quét từ Excel: Admin({adminEmail}) tạo User({_sharedStudentEmail})");
 
-            // ==============================================================
-            // PHASE 1: ADMIN ĐĂNG NHẬP
-            // ==============================================================
             _loginPage.GoToLoginPage(_loginUrl);
             SelectRoleFromExcelText(adminRole);
             _loginPage.NhapThongTin(adminEmail, adminPass);
             _loginPage.ClickDangNhap();
             _wait.Until(d => d.Url.Contains("Admin") || d.Url.Contains("Dashboard"));
 
-            // ==============================================================
-            // PHASE 2: ADMIN TẠO USER MỚI
-            // ==============================================================
+
             _driver.Navigate().GoToUrl(_createUserUrl);
             _wait.Until(d => _userPage.EmailInput.Displayed);
 
@@ -120,9 +110,7 @@ namespace test_etesthub.Tests.Login
             _userPage.ClickCreateUserBtn();
             Thread.Sleep(2000);
 
-            // ==============================================================
-            // PHASE 3: TÌM KIẾM USER VỪA TẠO TRONG DANH SÁCH
-            // ==============================================================
+
             _driver.Navigate().GoToUrl(_userMgmtUrl);
             _wait.Until(d => _userPage.SearchInput.Displayed);
 
@@ -132,16 +120,12 @@ namespace test_etesthub.Tests.Login
             var tableBody = _driver.FindElement(By.CssSelector("#usersTable tbody"));
             Assert.That(tableBody.Text.Contains(_sharedStudentEmail), Is.True, "Lỗi: Không tìm thấy sinh viên vừa tạo.");
 
-            // ==============================================================
-            // PHASE 4: ADMIN LOGOUT BẰNG CÁCH XÓA PHIÊN
-            // ==============================================================
+
             _driver.Manage().Cookies.DeleteAllCookies();
             _loginPage.GoToLoginPage(_loginUrl);
             _wait.Until(d => _loginPage.LoginButton.Displayed);
 
-            // ==============================================================
-            // PHASE 5: SINH VIÊN VỪA TẠO ĐĂNG NHẬP
-            // ==============================================================
+
             SelectRoleFromExcelText(loginRole);
             _loginPage.NhapThongTin(_sharedStudentEmail, loginPass);
             _loginPage.ClickDangNhap();
@@ -159,16 +143,13 @@ namespace test_etesthub.Tests.Login
         {
             _currentTestCaseId = "S.1.44";
 
-            // 1. ĐỌC DỮ LIỆU TỪ EXCEL
             string[] testData = _excelManager.GetTestDataArray(_currentTestCaseId);
 
             string loginRole = testData.Length > 0 ? testData[0] : "Sinh Viên";
             string loginPass = testData.Length > 1 ? testData[1] : "123456";
 
-            // Ưu tiên dùng tài khoản vừa được tạo thành công từ Test Case 43
             string studentEmail = !string.IsNullOrEmpty(_sharedStudentEmail) ? _sharedStudentEmail : "sv00001@gmail.com";
 
-            // Bước 1 -> 4: Đăng nhập Sinh viên
             _loginPage.GoToLoginPage(_loginUrl);
             SelectRoleFromExcelText(loginRole);
             _loginPage.NhapThongTin(studentEmail, loginPass);
@@ -176,12 +157,10 @@ namespace test_etesthub.Tests.Login
 
             _wait.Until(d => d.Url.Contains("Student") || d.Url.Contains("Dashboard") || d.Url.Contains("Index"));
 
-            // Bước 8: Giả lập Sinh viên cố tình paste URL của màn hình Admin vào thanh địa chỉ
             TestContext.WriteLine("[HỆ THỐNG] Đang giả lập hành vi truy cập trái phép vào trang Quản lý User của Admin...");
             _driver.Navigate().GoToUrl(_userMgmtUrl);
             Thread.Sleep(1500);
 
-            // Xác nhận hệ thống chặn (Access Denied)
             string currentUrl = _driver.Url;
             string pageText = _driver.FindElement(By.TagName("body")).Text.ToLower();
 
