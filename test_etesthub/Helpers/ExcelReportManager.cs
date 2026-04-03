@@ -17,8 +17,8 @@ namespace test_etesthub.Helpers
         private const int Col_ID = 3;             // Cột C
         private const int Col_Steps = 7;          // Cột G
         private const int Col_TestData = 8;       // Cột H
-        private const int Col_ActualResult = 10;  // Cột J: Result (Kết quả thực tế)
-        private const int Col_TestScript = 11;    // Cột K: Test Scripts (Tên hàm)
+        private const int Col_ActualResult = 10;  // Cột J
+        private const int Col_TestScript = 11;    // Cột K
         private const int Col_ResultStatus = 12;  // Cột K
         private const int Col_Screenshot = 14;    // Cột M
 
@@ -52,7 +52,7 @@ namespace test_etesthub.Helpers
             bool isFound = false;
             string targetId = testCaseId.Replace(" ", "").ToUpper();
 
-            for (int row = 1; row <= 200; row++)
+            for (int row = 1; row <= 500; row++)
             {
                 string currentId = GetCellText(row, Col_ID).Replace(" ", "").ToUpper();
 
@@ -85,7 +85,7 @@ namespace test_etesthub.Helpers
         {
             try
             {
-                for (int row = 1; row <= 200; row++)
+                for (int row = 1; row <= 500; row++)
                 {
                     string cellId = GetCellText(row, Col_ID).Replace(" ", "").ToUpper();
                     string targetId = testCaseId.Replace(" ", "").ToUpper();

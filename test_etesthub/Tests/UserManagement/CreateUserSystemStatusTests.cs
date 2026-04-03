@@ -51,9 +51,7 @@ namespace test_etesthub.Tests.UserManagement
             try { wait.Until(d => !d.Url.Contains("Login")); } catch { }
         }
 
-        // ==========================================
         // CÁC HÀM HỖ TRỢ XỬ LÝ DỮ LIỆU ĐỘNG & EXCEL
-        // ==========================================
 
         private void GetUserFormData(string testCaseId, out string email, out string firstName, out string lastName, out string role, out string pass, out string confirmPass)
         {
