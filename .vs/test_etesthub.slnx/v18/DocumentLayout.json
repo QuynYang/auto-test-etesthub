@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\test_etesthub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\helpers\\excelreportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +17,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\helpers\\screenshothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\helpers\\screenshothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\usermanagement\\createuserboundarytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,10 +79,6 @@
       "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\tests\\login\\logintest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\test_etesthub.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{089100B1-113F-4E66-888A-E83F3999EAFD}|Solution Items{089100B1-113F-4E66-888A-E83F3999EAFD}|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
@@ -95,19 +99,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IntegrationTests.cs",
-              "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
-              "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
-              "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
-              "RelativeToolTip": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAIwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:39:50.163Z",
+              "Title": "README.md",
+              "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-04-12T23:57:18.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "CreateUserBoundaryTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserBoundaryTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserBoundaryTests.cs",
@@ -119,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ScreenshotHelper.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ScreenshotHelper.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Helpers\\ScreenshotHelper.cs",
@@ -131,20 +135,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ExcelReportManager.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ExcelReportManager.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Helpers\\ExcelReportManager.cs",
               "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ExcelReportManager.cs",
               "RelativeToolTip": "test_etesthub\\Helpers\\ExcelReportManager.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwIkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAlIkipB4GwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T06:52:39.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "LoginIntegrationTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginIntegrationTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginIntegrationTests.cs",
@@ -156,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "CreateUserIntegrationTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserIntegrationTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserIntegrationTests.cs",
@@ -168,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "CreateUserSystemStatusTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserSystemStatusTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserSystemStatusTests.cs",
@@ -180,7 +184,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "test_etesthub.csproj",
+              "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj",
+              "RelativeDocumentMoniker": "test_etesthub\\test_etesthub.csproj",
+              "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj",
+              "RelativeToolTip": "test_etesthub\\test_etesthub.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-26T07:06:19.469Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IntegrationTests.cs",
+              "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
+              "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
+              "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
+              "RelativeToolTip": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T14:39:50.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CreateUserLogicTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserLogicTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserLogicTests.cs",
@@ -192,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CreateUserValidationTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserValidationTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserValidationTests.cs",
@@ -204,7 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UserManagementPage.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Pages\\UserManagementPage.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Pages\\UserManagementPage.cs",
@@ -216,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "CreateUserUITests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\UserManagement\\CreateUserUITests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\UserManagement\\CreateUserUITests.cs",
@@ -228,7 +257,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "LoginSystemStatusTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginSystemStatusTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginSystemStatusTests.cs",
@@ -240,7 +269,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "LoginSecuritySessionTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginSecuritySessionTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginSecuritySessionTests.cs",
@@ -252,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "LoginBoundaryTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginBoundaryTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginBoundaryTests.cs",
@@ -264,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "LoginLogicTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginLogicTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginLogicTests.cs",
@@ -276,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "LoginPage.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Pages\\LoginPage.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Pages\\LoginPage.cs",
@@ -288,7 +317,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "LoginTest.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\LoginTest.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\LoginTest.cs",
@@ -300,7 +329,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": ".gitignore",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -309,18 +338,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-03-31T06:54:58.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "test_etesthub.csproj",
-              "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj",
-              "RelativeDocumentMoniker": "test_etesthub\\test_etesthub.csproj",
-              "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\test_etesthub.csproj",
-              "RelativeToolTip": "test_etesthub\\test_etesthub.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-26T07:06:19.469Z"
             }
           ]
         }

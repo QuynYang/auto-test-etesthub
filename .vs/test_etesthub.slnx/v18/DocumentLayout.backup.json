@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\helpers\\excelreportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\helpers\\excelreportmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\helpers\\screenshothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\helpers\\screenshothelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|solutionrelative:test_etesthub\\tests\\login\\integrationtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BFF6946-73DC-A992-BAE8-C2EDD7B3339E}|test_etesthub\\test_etesthub.csproj|e:\\code\\bdclpm\\lt\\doan\\test_etesthub\\test_etesthub\\tests\\usermanagement\\createuserboundarytests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,16 +94,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "IntegrationTests.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
               "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Tests\\Login\\IntegrationTests.cs",
               "RelativeToolTip": "test_etesthub\\Tests\\Login\\IntegrationTests.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwD4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:39:50.163Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T14:39:50.163Z"
             },
             {
               "$type": "Document",
@@ -119,7 +118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ScreenshotHelper.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ScreenshotHelper.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Helpers\\ScreenshotHelper.cs",
@@ -127,17 +126,18 @@
               "RelativeToolTip": "test_etesthub\\Helpers\\ScreenshotHelper.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T06:53:19.583Z"
+              "WhenOpened": "2026-03-26T06:53:19.583Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "ExcelReportManager.cs",
               "DocumentMoniker": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ExcelReportManager.cs",
               "RelativeDocumentMoniker": "test_etesthub\\Helpers\\ExcelReportManager.cs",
               "ToolTip": "E:\\code\\bdclpm\\LT\\doan\\test_etesthub\\test_etesthub\\Helpers\\ExcelReportManager.cs",
               "RelativeToolTip": "test_etesthub\\Helpers\\ExcelReportManager.cs",
-              "ViewState": "AgIAAH8AAAAAAAAAAAAcwIkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAlIkipB4GwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-26T06:52:39.21Z",
               "EditorCaption": ""
